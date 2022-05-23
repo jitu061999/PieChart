@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart</title>
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nuntio', sans-serif;
+        }
+
+        .main_div{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center_div{
+            width: 50vw;
+            height:70vh;
+            position: relative;
+            border:1px solid black;
+            border-radius:30px;
+            box-shadow: 
+            0 2.8px 2.2px rgba(0,0,0,0.034),
+            0 6.7px 5.3px rgba(0,0,0,0.048),
+            0 12.5px 10px rgba(0,0,0,0.06),
+            0 22.3px 17.9px rgba(0,0,0,0.072),
+            0 41.8px 33.4px rgba(0,0,0,0.086),
+            0 100px 80px rgba(0,0,0,0.12);
+        }
+
+        .center_div h1{
+            padding:20px 0 20px 20px;
+            text-align: center;
+            font-style: italic;
+        }
+        .center_div p{
+            position: absolute;
+            right:1.5rem;
+            bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: right;
+        }
+
+        .center_div  span::after {
+            content:" ";
+            position: absolute;
+            
+            display: inline;
+            width:0.6rem;
+            height:0.6rem;
+            border-radius:50% ;
+            font-weight: 700px;
+            background: currentColor;
+            margin:0 0.5rem;
+
+        }
+
+        .center_div h3{
+            position: absolute;
+            bottom: 0;
+            padding:1rem; 
+            color: grey;
+            font-style: italic;
+        }
+
+        .pie-chart{
+            background:radial-gradient(circle closest-side,transparent 100%,#fff 0),
+            conic-gradient(
+                from 180deg,
+                #ee5253 0,
+                #ee5253 41.66%,
+                #ff9f43 0,
+                #ff9f43 70.82%,
+                #f368e0 0,
+                #f368e0 83.32%,
+                #0abde3 0,
+                #0abde3  91.65%,
+                #10ac84 0,
+                #10ac84 100%
+            );
+            min-width: 300px;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <div class="center_div">
+            <h1>My Daily Activities</h1>
+            <div class="pie-chart"></div>
+            <p>
+                Study 10 <span style="color: #ee5253"></span> <br>
+                Sleep 7 <span style="color: #f28e2c"></span> <br>
+                Coding 3 <span style="color: #f368e0"></span> <br>
+                watch TV 2 <span style="color: #0abde3"></span> <br>
+                commute 2<span style="color: #10ac84"></span> <br>
+            </p>
+            <h3>All values are in hours*</h3>
+        </div>
+    </div>
+</body>
+</html>
